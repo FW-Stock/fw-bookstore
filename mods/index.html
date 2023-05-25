@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<!-- FW Bookstore -->
+		<!-- © Copyright 2022 FW Bookstore. Ideator: Francis Teoh Dun Yong, Developer: Lim Wen Hao, Social Media: Char Zhi Xuan. -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Moderator Page</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+
+		<!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+		<!-- <link rel="stylesheet" href="mods.styles.css"> -->
+    <link rel="stylesheet" href="mods.styles.min.css">
+
+		<!-- Metadata -->
+		<meta property="og:title" content="FW Bookstore">
+		<meta property="og:description" content="A website that exhibits a wide range of used books (reference, self-made notes, textbooks, exercises, etc) at a much lower price to help out students who will be sitting for big exams."/>
+    <meta property="og:image" content="../images/favicon/favicon-512.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+
+		<!-- Icon -->
+		<link rel="icon" href="../images/favicon/favicon-16.png" sizes="16x16">
+		<link rel="icon" href="../images/favicon/favicon-32.png" sizes="32x32">
+		<link rel="icon" href="../images/favicon/favicon-180.png" sizes="180x180">
+		<link rel="icon" href="../images/favicon/favicon-192.png" sizes="192x192">
+		<link rel="icon" href="../images/favicon/favicon-512.png" sizes="512x512">
+	</head>
+	<body>
+		<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbarTop fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../"><span class="title_FW">FW</span><span class="title_Stock"> Bookstore</span></a>
+        <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link nav-linkTop" aria-current="page" href="../">Shopping</a></li>
+            <li class="nav-item"><a class="nav-link nav-linkTop" href="../introduction">Our Page</a></li>
+						<li class="nav-item"><a class="nav-link nav-linkTop" href="../studio?action=upload">Upload Yours!</a></li>
+						<li class="nav-item l_user"><a class="nav-link nav-linkTop" href="javascript: profile()">My Account</a></li>
+          </ul>
+          <button class="btn btn-outline ms-2" id="b_user" name="button" onclick="profile()"><i class="fas fa-user i_user"><img id="i_profile" src=""></i></button>
+        </div>
+      </div>
+    </nav>
+
+		<!-- Back button -->
+    <button class="btn btn-outline-secondary" id="b_back" type="button" name="button"><i class="fas fa-chevron-left"></i>  Back</button>
+
+		<!-- Main -->
+		<div class="main">
+			<div class="mb-4" id="rules">
+				<h3 class="l_title mb-1">Moderator Page</h3>
+				<p class="mt-3 mb-0">To the moderators:</p>
+				<ul>
+					<li>Do not share your email, password and personal ID to any unauthorised organisation, company or individuals.</li>
+					<li>This webpage is only accessible to the moderators.</li>
+					<li>Any changes made in this webpage can affect the experience of users in FW Bookstore.</li>
+					<li>Think twice before you take the action.</li>
+					<li>Please always refer to our <a href="../privacy_policy.html" target="_blank">Privacy Policy</a>.</li>
+				</ul>
+			</div>
+			<div class="mb-4" id="verify">
+				<h4 class="l_title">Verifying Users<span>
+					<button type="button" title="Reload" class="b_reload" onclick="filter_sent()"><i class="fa-regular fa-arrow-rotate-right"></i></button>
+					<button type="button" title="Hide" class="b_reload" onclick="hide(this)"><i class="fa-regular fa-down-left-and-up-right-to-center"></i></button>
+				</h4>
+				<div class="table_box">
+					<table>
+						<tbody>
+							<tr>
+								<th>Display Name</th>
+								<th>Email ID</th>
+								<th>Contact</th>
+								<th>User ID</th>
+								<th>Sent request<br>
+									<small><select id="c_sent" onchange="filter_sent()">
+										<option value="all">All</option>
+										<option value="true">True</option>
+										<option value="false">False</option>
+									</select></small>
+								</th>
+								<th>Validated<br>
+									<small><select id="c_validated" onchange="filter_validated()">
+										<option value="all">All</option>
+										<option value="true">True</option>
+										<option value="false">False</option>
+									</select></small>
+								</th>
+								<th>Seller<br>
+									<small><select id="c_seller" onchange="filter_seller()">
+										<option value="all">All</option>
+											<option value="true">True</option>
+											<option value="false">False</option>
+									</select></small>
+								</th>
+						</tr>
+						</tbody>
+						<tbody id="table_verify"></tbody>
+				</table>
+				</div>
+			</div>
+			<div class="mb-4" id="check">
+				<h4 class="l_title">Book Checking<span>
+					<button type="button" title="Reload" class="b_reload" onclick="initial2()"><i class="fa-regular fa-arrow-rotate-right"></i></button>
+					<button type="button" title="Hide" class="b_reload" onclick="hide(this)"><i class="fa-regular fa-down-left-and-up-right-to-center"></i></button>
+				</h4>
+				<div class="table_box">
+					<table>
+						<tbody>
+							<tr>
+								<th>Item Name &nbsp;&nbsp;</th>
+								<th>Email</th>
+								<th>Contact</th>
+								<th>Uploaded at</th>
+								<th>Action</th>
+								<th>Log<br>
+								</th>
+							</tr>
+						</tbody>
+						<tbody id="table_check"></tbody>
+				</table>
+				</div>
+			</div>
+			<footer></footer>
+		</div>
+
+		<!-- Bootstrap alert -->
+    <div class="fixed-top" id="liveAlertPlaceholder"></div>
+
+		<div class="overlay" id="verify_agreement">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Verify Users to Upgrade to Seller Account</h5>
+					</div>
+					<div>
+						<div class="modal-body">
+							<p>By becoming a party of this agreement, Your Name, Email and User ID will be appeared as the Grantor of this user.</p>
+							<p>By pressing 'Allow' button, the user account is upgraded to Seller Account.</p>
+							<p>By pressing 'Disallow' button, the user account is blacklisted and is not upgraded to Seller Account, or removed from the Seller Account List.</p>
+						</div>
+						<div class="modal-footer" id="eFooter">
+							<button class="btn btn-danger x" onclick="close_declare()">Cancel</button>
+							<button class="btn btn-warning" onclick="disallow()">Disallow</button>
+							<button class="btn btn-success" onclick="allow()">Allow</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- JavaScript -->
+    <!-- Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-storage.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+      var config = {
+				apiKey: "AIzaSyCyLlEJRR-BtsL1FBa-bDD2X0eHaLU5VFs",
+		    authDomain: "fw-stock.firebaseapp.com",
+		    projectId: "fw-stock",
+		    storageBucket: "fw-stock.appspot.com",
+		    messagingSenderId: "479506617832",
+		    appId: "1:479506617832:web:2537975d42a5e4febcc05d",
+		    measurementId: "G-69CV1DTTGN"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="https://unpkg.com/emodal@1.2.69/dist/eModal.min.js"></script>
+		<!-- <script src="mods.js?v=1.0.11" charset="utf-8"></script> -->
+    <script src="mods.min.js?v=1.0.0" charset="utf-8"></script>
+	</body>
+</html>

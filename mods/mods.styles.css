@@ -1,0 +1,250 @@
+/* FW Bookstore */
+/* © Copyright 2022 FW Bookstore. Ideator: Francis Teoh Dun Yong, Developer: Lim Wen Hao, Social Media: Char Zhi Xuan. */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+	overflow-y: hidden;
+}
+
+/* Navbar */
+.navbarTop {
+  background-color: #5C527F;
+  border-bottom: solid 1px #333;
+  font-size: 16px;
+  padding: 10px 5px 10px 20px;
+}
+
+.title_FW {
+  background-color: inherit !important;
+	color: #E37C3E !important;
+	font-family: "Lucida Handwriting Italic", cursive;
+	font-size: 28px;
+}
+.title_Stock {
+  background-color: inherit !important;
+	color: #eee !important;
+	font-family: "Lucida Sans Unicode", sans-serif;
+	font-size: 24px;
+}
+
+/* Fonts */
+@font-face {
+	font-family: "Lucida Handwriting Italic";
+	src: url("../fonts/Lucida Handwriting Italic.ttf");
+}
+@font-face {
+	font-family: "Lucida Sans Unicode";
+	src: url("../fonts/Lucida Sans Unicode.ttf");
+}
+
+.navbar-toggler-icon {
+  color: #ccc;
+}
+
+.nav-link {
+  color: #ccc;
+  text-align: center;
+}
+
+.nav-linkTop, .nav-linkTop:active, .nav-linkTop:visited {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+.nav-link:hover, .active {
+	border: none;
+  border-bottom: solid 2px #6E85B2;
+  color: #fff;
+}
+
+.active {
+  color: #6E85B2 !important;
+}
+.disabled {
+	color: #a2a2a2 !important;
+}
+
+#b_user {
+  color: #ccc;
+}
+.l_user {
+	display: none;
+}
+
+#i_profile {
+  border-radius: 100%;
+  height: 35px;
+  object-fit: cover;
+  width: 35px;
+}
+
+/* Back */
+#b_back {
+  margin: 90px 0 0 2vw;
+  position: absolute;
+  z-index: 20;
+}
+
+/* Main */
+.main {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 1rem;
+	padding-bottom: 5rem;
+	position: absolute;
+  top: 120px;
+	width: 100%;
+}
+
+.l_title {
+  font-weight: 600;
+}
+
+.b_reload {
+  background-color: #222;
+  border: 0;
+  border-radius: 5px;
+  color: #eee;
+  margin-left: 10px;
+  padding: 0.5rem 0.8rem;
+  width: 60px;
+}
+.b_reload:hover, .b_reload:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.table_box {
+  overflow-x: scroll;
+}
+
+table, th, td {
+  border: 1px solid #000;
+  vertical-align: text-top;
+}
+td {
+  padding: 1rem;
+}
+th {
+  padding: 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.fa-solid {
+  display: inline-block;
+  font-size: 50px;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+.fa-check {
+  color: #025D23;
+}
+.fa-xmark {
+  color: #EC1E1E;
+}
+
+.img_check {
+  display: block;
+  margin: 10px auto 0;
+  object-fit: contain;
+  width: 150px;
+}
+
+.bt {
+  border: 1px solid #808080;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  width: 100px;
+}
+.bt:hover, .bt:active {
+  background-color: #555;
+  color: #eee;
+}
+
+.b_disable {
+  margin-top: 10px;
+  width: auto;
+}
+
+.b_edit, .b_suspend {
+  border: 0;
+  color: #eee;
+  height: 40px;
+}
+.b_edit {
+  background-color: #1E9DEC;
+}
+.b_suspend {
+  background-color: #EC1E1E;
+}
+.b_edit:hover, .b_edit:active {
+  background-color: #1493E3;
+  color: #fff;
+}
+.b_suspend:hover, .b_suspend:active {
+  background-color: #E31414;
+  color: #fff;
+}
+
+footer {
+  height: 100px;
+  width: 100%;
+}
+
+.modal-content {
+  margin: auto;
+  position: absolute;
+  top: 20vh;
+  z-index: 100;
+}
+.modal-body {
+  max-height: 45vh;
+  overflow-y: auto;
+  position:relative;
+  word-wrap:break-word;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,.4);
+  z-index: 10000;
+  cursor: default;
+  transition: opacity .3s;
+  display: none;
+}
+
+/* Responsive webpage */
+@media (max-width: 992px) {
+  /* Navbar */
+  .nav-link, .nav-link:active, .nav-link:visited{
+    text-align: left;
+  }
+	#b_user {
+		display: none;
+	}
+	.l_user {
+		display: block;
+	}
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  height: 6px;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

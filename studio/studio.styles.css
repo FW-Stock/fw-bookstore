@@ -1,0 +1,326 @@
+/* FW Bookstore */
+/* © Copyright 2022 FW Bookstore. Ideator: Francis Teoh Dun Yong, Developer: Lim Wen Hao, Social Media: Char Zhi Xuan. */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/* Navbar */
+.navbarTop {
+  background-color: #5C527F;
+  border-bottom: solid 1px #333;
+  font-size: 16px;
+  padding: 10px 5px 10px 20px;
+}
+
+.title_FW {
+  background-color: inherit !important;
+	color: #E37C3E !important;
+	font-family: "Lucida Handwriting Italic", cursive;
+	font-size: 28px;
+}
+.title_Stock {
+  background-color: inherit !important;
+	color: #eee !important;
+	font-family: "Lucida Sans Unicode", sans-serif;
+	font-size: 24px;
+}
+
+/* Fonts */
+@font-face {
+	font-family: "Lucida Handwriting Italic";
+	src: url("../fonts/Lucida Handwriting Italic.ttf");
+}
+@font-face {
+	font-family: "Lucida Sans Unicode";
+	src: url("../fonts/Lucida Sans Unicode.ttf");
+}
+
+.navbar-toggler-icon {
+  color: #ccc;
+}
+
+.nav-link {
+  color: #ccc;
+  text-align: center;
+}
+
+.nav-linkTop, .nav-linkTop:active, .nav-linkTop:visited {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+.nav-link:hover, .active {
+	border: none;
+  border-bottom: solid 2px #6E85B2;
+  color: #fff;
+}
+
+.active {
+  color: #6E85B2 !important;
+}
+.disabled {
+	color: #a2a2a2 !important;
+}
+
+#b_user {
+  color: #ccc;
+}
+.l_user {
+	display: none;
+}
+
+#i_profile {
+  border-radius: 100%;
+  height: 35px;
+  object-fit: cover;
+  width: 35px;
+}
+
+/* Back */
+#b_back {
+  position: absolute;
+  margin: 90px 0 0 2vw;
+  z-index: 20;
+}
+
+/* Main */
+.main {
+	font-size: 16px;
+	/* height: calc(100vh - 70px - 2rem); */
+	margin: 1rem;
+	outline: 1px solid #404040;
+  overflow-x: hidden;
+	position: absolute;
+  top: 120px;
+	width: calc(100vw - 2rem);
+}
+
+.l_title {
+	background-color: #D6D6D6;
+	color: #333;
+	font-size: 18px;
+	font-weight: 600;
+	outline: 1px solid #404040;
+	padding: 0.2rem 30px;
+	width: 100%;
+}
+
+.l_title {
+	background-color: #D6D6D6;
+	color: #333;
+	font-size: 18px;
+	font-weight: 600;
+	outline: 1px solid #404040;
+	padding: 0.2rem 30px;
+	width: 100%;
+}
+
+.div_items {
+	padding: 0.2rem 30px;
+}
+
+.l_label {
+	margin-right: 10px;
+}
+.l_star {
+  color: #D44646;
+  font-weight: 600;
+}
+.t_items {
+	height: 35px;
+	width: 94%;
+}
+#t_des {
+	height: auto;
+	vertical-align: text-top;
+}
+#c_sub, #c_category, #c_level, .t_share {
+	height: 35px;
+}
+.t_share {
+	margin-right: 5%;
+	min-width: 200px;
+	width: 14vw;
+}
+#t_publisher {
+	width: 52vw;
+}
+
+.count {
+	bottom: 5px;
+	font-size: 12px;
+	font-style: italic;
+	position: absolute;
+	right: 7%;
+	text-align: right;
+	z-index: 10;
+}
+.count_box {
+	display: inline-block;
+	position: relative;
+	width: calc(100% - 120px);
+}
+
+.blank {
+	display: inline;
+	margin: 0;
+}
+
+.b_add {
+	background-color: #222;
+	border: 0;
+	border-radius: 5px;
+	color: #eee;
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+}
+.fa_t {
+	display: block;
+	padding-top: 10px;
+	text-align: center;
+}
+.b_add:hover, .b_add:active {
+	background-color: #000;
+	color: #fff;
+}
+.l_f_chosen {
+	display: inline-block;
+	width: 250px;
+}
+.image_chosen {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	height: 50px;
+	vertical-align: middle;
+	width: 50px;
+}
+
+.file_upload_div {
+  display: none;
+}
+
+#b_submit {
+	background-color: #D86B27;
+	border: 0;
+	border-radius: 10px;
+	color: #eee;
+	font-size: 20px;
+	height: 50px;
+	position: relative;
+  left: 80%;
+	width: 150px
+}
+#b_submit:hover, #b_sumbit:active {
+	color: #fff;
+	outline: 1px solid #8F4414;
+}
+
+/* Bootstrap alert */
+#liveAlertPlaceholder {
+  top: 80px;
+}
+
+.modal-content {
+  margin: auto;
+  position: absolute;
+  top: 20vh;
+  z-index: 100;
+}
+.modal-body {
+  max-height: 45vh;
+  overflow-y: auto;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,.4);
+  z-index: 10000;
+  cursor: default;
+  transition: opacity .3s;
+  display: none;
+}
+
+/* Responsive webpage */
+@media (max-width: 992px) {
+  /* Navbar */
+  .nav-link, .nav-link:active, .nav-link:visited{
+    text-align: left;
+  }
+	#b_user {
+		display: none;
+	}
+	.l_user {
+		display: block;
+	}
+	/* Main */
+	.main {
+    margin: 0;
+    margin-top: 20px;
+		width: 100%;
+	}
+	.blank {
+		display: block;
+	}
+	.margin_responsive {
+		margin-bottom: 0.5rem;
+	}
+	.count_box {
+		min-width: 90vw;
+	}
+  #b_submit {
+    display: block;
+    margin: auto;
+    position: initial;
+  }
+}
+@media (max-width: 600px){
+	select {
+		display: block;
+		width: 50vw;
+	}
+	.l_f_chosen {
+		width: 40vw;
+	}
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  height: 3px;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* italic placeholder */
+::-webkit-input-placeholder {
+	color: #B4B4B4;
+	font-style: italic;
+}
+:-moz-placeholder {
+	color: #B4B4B4;
+	font-style: italic;
+}
+::-moz-placeholder {
+	color: #B4B4B4;
+	font-style: italic;
+}
+:-ms-input-placeholder {
+	color: #B4B4B4;
+	font-style: italic;
+}

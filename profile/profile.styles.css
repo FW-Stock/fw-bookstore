@@ -1,0 +1,451 @@
+/* FW Bookstore */
+/* © Copyright 2022 FW Bookstore. Ideator: Francis Teoh Dun Yong, Developer: Lim Wen Hao, Social Media: Char Zhi Xuan. */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/* Navbar */
+.navbarTop {
+  background-color: #5C527F;
+  border-bottom: solid 1px #333;
+  font-size: 16px;
+  padding: 10px 5px 10px 20px;
+}
+
+.title_FW {
+  background-color: inherit !important;
+	color: #E37C3E !important;
+	font-family: "Lucida Handwriting Italic", cursive;
+	font-size: 28px;
+}
+.title_Stock {
+  background-color: inherit !important;
+	color: #eee !important;
+	font-family: "Lucida Sans Unicode", sans-serif;
+	font-size: 24px;
+}
+
+/* Fonts */
+@font-face {
+	font-family: "Lucida Handwriting Italic";
+	src: url("../fonts/Lucida Handwriting Italic.ttf");
+}
+@font-face {
+	font-family: "Lucida Sans Unicode";
+	src: url("../fonts/Lucida Sans Unicode.ttf");
+}
+
+.navbar-toggler-icon {
+  color: #ccc;
+}
+
+.nav-link {
+  color: #ccc;
+  text-align: center;
+}
+
+.nav-linkTop, .nav-linkTop:active, .nav-linkTop:visited {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+.nav-link:hover, .active {
+	border: none;
+  border-bottom: solid 2px #6E85B2;
+  color: #fff;
+}
+
+.active {
+  color: #6E85B2 !important;
+}
+.disabled {
+	color: #a2a2a2 !important;
+}
+
+#b_user {
+  color: #ccc;
+}
+.l_user {
+	display: none;
+}
+
+#i_profile {
+  border-radius: 100%;
+  height: 35px;
+  object-fit: cover;
+  width: 35px;
+}
+
+/* Back */
+#b_back {
+  position: absolute;
+  margin: 90px 0 0 2vw;
+  z-index: 20;
+}
+
+/* Main */
+.main {
+	font-size: 16px;
+	margin: 1rem;
+	outline: 1px solid #404040;
+  overflow-x: hidden;
+	position: absolute;
+  top: 120px;
+	width: calc(100vw - 2rem);
+}
+
+.l_title {
+	background-color: #D6D6D6;
+	color: #333;
+	font-size: 18px;
+	font-weight: 600;
+	outline: 1px solid #404040;
+	padding: 0.2rem 30px;
+	width: 100%;
+}
+
+.l_contact {
+  color: #808080;
+  display: inline-block;
+  min-width: 150px;
+}
+
+.box {
+	padding: 1rem;
+}
+.box2 {
+	margin: auto 1.5rem;
+}
+
+.img_profile {
+	background-image: url("");
+	background-size: cover;
+  border: 1px solid #444;
+	border-radius: 20px;
+	display: inline-block;
+	height: 150px;
+	margin-left: calc((100% - 150px)/2);
+	width: 150px;
+}
+.l_profile_name {
+	color: #333;
+	display: inline-block;
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+.l_badge, .l_badge2 {
+	border-radius: 20px;
+	display: inline-table;
+	font-size: 18px;
+	height: 45px;
+	margin: auto 1rem 10px;
+	text-align: center;
+	vertical-align: middle;
+	width: 175px
+}
+.l_mods {
+  border: 3px solid #DE6820;
+  color: #DE6820;
+  display: none;
+}
+.l_seller {
+  border: 3px solid #E8AC2E;
+  color: #E8AC2E;
+}
+.l_registered {
+  border: 3px solid #A9A9A9;
+  color: #A9A9A9;
+}
+.l_badge_text {
+	display: table-cell;
+	vertical-align: middle;
+}
+.fa-badge-check {
+	color: #333;
+}
+.l_school {
+  font-size: 15px !important;
+}
+
+.div_seller {
+	padding: 0.2rem 30px;
+}
+
+.div_contact {
+	display: inline-block;
+}
+
+.l_label {
+	margin-right: 10px;
+}
+.l_star {
+  color: #D44646;
+  font-weight: 600;
+}
+.t_seller {
+	height: 32px;
+	width: 85%;
+}
+#c_contact {
+	height: 32px;
+	width: 180px;
+}
+#t_contact {
+	height: 32px;
+  min-width: 60%;
+	width: calc(100% - 185px);
+}
+.c_profile_img_box {
+  display: inline-block;
+  min-width: 220px;
+}
+#c_profile_img {
+	margin-right: 5px;
+}
+.label_c_profile_img {
+  padding-right: 4vw;
+}
+#f_profile_img {
+	width: auto;
+}
+.image_chosen {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	height: 50px;
+	vertical-align: middle;
+	width: 50px;
+}
+
+#b_update {
+	background-color: #61A4BC;
+  border: 0;
+	border-radius: 10px;
+	color: #eee;
+	font-size: 20px;
+	height: 50px;
+	left: 82%;
+	max-width: 150px;
+	position: relative;
+	width: 20vw;
+}
+#b_update:hover, #b_update:active {
+  background-color: #549BB6;
+  color: #fff;
+  outline: 2px solid #5B7DB1;
+}
+
+hr {
+  margin: auto;
+  width: 80%;
+}
+
+#b_upgrade, #b_logout {
+  border: 0;
+  border-radius: 10px;
+  color: #eee;
+  display: block;
+	font-weight: 600;
+  height: 50px;
+  margin: 20px auto;
+  width: 200px;
+}
+#b_upgrade {
+  background-color: #DE6820;
+  display: none;
+}
+#b_logout {
+  background-color: #222;
+}
+#b_upgrade:hover, #b_upgrade:active {
+  background-color: #D86B27;
+	color: #fff;
+	outline: 1px solid #8F4414;
+}
+
+#b_new {
+  background-color: #222;
+  border: 0;
+  border-radius: 5px;
+  color: #eee;
+  margin-left: 10px;
+  padding: 0.1rem 0.5rem;
+}
+#b_new:hover, #b_new:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.item_card {
+  border-radius: 1rem;
+  margin: 3px;
+  max-width: 15rem;
+}
+
+.item_card:hover, .item_card:active {
+  outline: 2px solid #100C13;
+}
+
+.img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 2rem;
+  font-weight: bolder;
+  height: 200px;
+  text-align: center;
+  padding-top: 30%;
+}
+
+.card-text {
+  margin-bottom: 0.4rem;
+}
+.l_item_name {
+  color: #1A132F;
+  font-weight: 600;
+}
+.l_price {
+  color: #D44646;
+  font-size: 22px;
+}
+.l_ori_price {
+  text-decoration: line-through;
+}
+.l_discount {
+  color: #0B7D57;
+  font-weight: 600;
+}
+.text-muted {
+  font-size: 12px;
+}
+
+.b_edit, .b_del, .b_sold {
+	border: 0;
+	border-radius: 10px;
+  color: #eee;
+	height: 40px;
+  margin: 3px auto;
+}
+.b_edit {
+  background-color: #5B7DB1;
+  width: 100%;
+}
+.b_sold {
+  background-color: #3E8058;
+  margin-right: calc(2% / 2);
+  width: 48%;
+}
+.b_del {
+  background-color: #F80808;
+  margin-left: calc(2% / 2);
+  width: 48%;
+}
+.b_edit:hover, .b_edit:active, .b_sold:hover, .b_sold:active, .b_del:hover, .b_del:active {
+  filter: brightness(110%);
+  outline: 1px solid #404040;
+}
+
+.modal-content {
+  margin: auto;
+  position: absolute;
+  top: 20vh;
+  z-index: 100;
+}
+.modal-body {
+  max-height: 45vh;
+  overflow-y: auto;
+  position:relative;
+  word-wrap:break-word;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,.4);
+  z-index: 10000;
+  cursor: default;
+  transition: opacity .3s;
+  display: none;
+}
+
+/* Bootstrap alert */
+#liveAlertPlaceholder {
+  top: 80px;
+}
+
+/* Responsive webpage */
+@media (max-width: 992px) {
+  /* Navbar */
+  .nav-link, .nav-link:active, .nav-link:visited{
+    text-align: left;
+  }
+	#b_user {
+		display: none;
+	}
+	.l_user {
+		display: block;
+	}
+	/* Main */
+	.main {
+    margin: 0;
+    margin-top: 20px;
+		width: 100%;
+	}
+  .box2{
+    margin: auto;
+    text-align: center;
+  }
+  .t_seller {
+    width: 90%;
+  }
+  #b_update {
+    left: 65vw;
+  }
+}
+@media (max-width: 600px){
+  #t_contact {
+    margin-top: 1px;
+    min-width: 100%;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  height: 3px;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* italic placeholder */
+::-webkit-input-placeholder {
+	color: #B4B4B4;
+	font-style: italic;
+}
+:-moz-placeholder {
+	color: #B4B4B4;
+	font-style: italic;
+}
+::-moz-placeholder {
+	color: #B4B4B4;
+	font-style: italic;
+}
+:-ms-input-placeholder {
+	color: #B4B4B4;
+	font-style: italic;
+}

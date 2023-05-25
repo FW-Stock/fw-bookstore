@@ -1,0 +1,13 @@
+My Account
+2022/07/08 1.0.0 - launching
+2022/07/09 1.1.0 - add school in My Account page
+2022/07/09 1.2.0 - add sold category
+2022/07/08 1.3.0 - extend reload time after marking as sold
+
+Upload Yours
+2022/07/08 1.0.0 - launching
+2022/07/21 1.1.0 - fix detect anonymous login bug
+
+Introduction
+2022/07/08 1.0.0 - launching
+2022/07/09 1.1.0 - Early Bird Promotion

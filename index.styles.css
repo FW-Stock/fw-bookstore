@@ -1,0 +1,240 @@
+/* FW Bookstore */
+/* © Copyright 2022 FW Bookstore. Ideator: Francis Teoh Dun Yong, Developer: Lim Wen Hao, Social Media: Char Zhi Xuan. */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/* Navbar */
+.navbarTop {
+  background-color: #5C527F;
+  border-bottom: solid 1px #333;
+  font-size: 16px;
+  padding: 10px 5px 10px 20px;
+}
+
+.title_FW {
+  background-color: inherit !important;
+	color: #E37C3E !important;
+	font-family: "Lucida Handwriting Italic", cursive;
+	font-size: 28px;
+}
+.title_Stock {
+  background-color: inherit !important;
+	color: #eee !important;
+	font-family: "Lucida Sans Unicode", sans-serif;
+	font-size: 24px;
+}
+
+/* Fonts */
+@font-face {
+	font-family: "Lucida Handwriting Italic";
+	src: url("../fonts/Lucida Handwriting Italic.ttf");
+}
+@font-face {
+	font-family: "Lucida Sans Unicode";
+	src: url("../fonts/Lucida Sans Unicode.ttf");
+}
+
+.navbar-toggler-icon {
+  color: #ccc;
+}
+
+.nav-link {
+  color: #ccc;
+  text-align: center;
+}
+
+.nav-linkTop, .nav-linkTop:active, .nav-linkTop:visited {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+.nav-link:hover, .active {
+	border: none;
+  border-bottom: solid 2px #6E85B2;
+  color: #fff;
+}
+
+.active {
+  color: #6E85B2 !important;
+}
+.disabled {
+	color: #a2a2a2 !important;
+}
+
+#b_user {
+  color: #ccc;
+}
+.l_user {
+	display: none;
+}
+
+#i_profile {
+  border-radius: 100%;
+  height: 35px;
+  object-fit: cover;
+  width: 35px;
+}
+
+/* Filter Bar */
+#filter_bar {
+	height: 1000%;
+	max-width: 250px;
+	min-width: 185px;
+	overflow-x: hidden;
+	position: fixed;
+  top: 70px;
+	width: 25vw;
+}
+
+.l_filter_bar, .l_filter_bar_responsive {
+	font-size: 20px;
+	margin-bottom: 0;
+	padding: 0.5rem 1rem 0;
+  z-index: 10;
+}
+
+.filter_bar_box {
+	border: 1px solid #aaa;
+	border-radius: 10px;
+	margin: 2vh auto;
+	padding: 0.4rem;
+	padding-top: 0;
+	width: 90%;
+}
+
+.filter_bar_box_list {
+  max-height: 20vh;
+  overflow-y: scroll;
+}
+
+.filter_bar_title {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+.l_dropdown {
+	cursor: pointer;
+}
+
+.c_box {
+	margin-right: 5px;
+}
+
+.l_filter_bar_responsive {
+  cursor: pointer;
+  display: none;
+  z-index: 25;
+}
+
+/* Main */
+.main {
+	height: 90%;
+	overflow-y: scroll;
+	position: fixed;
+	right: 0;
+  top: 70px;
+	width: 80vw;
+}
+
+.items {
+  padding: 1rem;
+}
+
+.item_card {
+  background-color: transparent;
+  border-radius: 1rem;
+  margin: 3px;
+  max-width: 15rem;
+}
+
+.item_card:hover, .item_card:active {
+  outline: 2px solid #100C13;
+}
+
+.img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  border-radius: 10px;
+  height: 200px;
+}
+
+.card-text {
+  margin-bottom: 0.4rem;
+}
+.l_item_name {
+  color: #1A132F;
+  font-weight: 600;
+}
+.l_price {
+  color: #D44646;
+  font-size: 22px;
+}
+.l_ori_price {
+  text-decoration: line-through;
+}
+.l_discount {
+  color: #0B7D57;
+  font-weight: 600;
+}
+.text-muted {
+  font-size: 12px;
+}
+
+/* Responsive webpage */
+@media (max-width: 992px) {
+  /* Navbar */
+  .nav-link, .nav-link:active, .nav-link:visited{
+    text-align: left;
+  }
+	#b_user {
+		display: none;
+	}
+	.l_user {
+		display: block;
+	}
+	/* Filter Bar */
+	#filter_bar {
+    background-color: #fff;
+		display: none;
+    height: calc(100% - 70px);
+    z-index: 20;
+	}
+  .l_filter_bar {
+    cursor: pointer;
+  }
+	.l_filter_bar_responsive {
+		display: inherit;
+	}
+  .filter_bar_box_list {
+    max-height: 18vh;
+    overflow-y: scroll;
+  }
+	/* Main */
+	.main {
+		width: 100vw;
+	}
+  .item_card {
+    max-width: 90%;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  height: 3px;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Dark mode */
+/* body, section, p, button, span, h1, h2, h3, h4, h5, h6 {
+  background-color: #292929 !important;
+  color: #dcdcdc !important;
+} */

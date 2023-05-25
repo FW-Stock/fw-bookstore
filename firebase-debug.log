@@ -1,0 +1,45 @@
+[debug] [2022-09-10T08:11:44.042Z] ----------------------------------------------------------------------
+[debug] [2022-09-10T08:11:44.045Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-09-10T08:11:44.045Z] CLI Version:   11.2.0
+[debug] [2022-09-10T08:11:44.046Z] Platform:      win32
+[debug] [2022-09-10T08:11:44.046Z] Node Version:  v16.15.1
+[debug] [2022-09-10T08:11:44.047Z] Time:          Sat Sep 10 2022 16:11:44 GMT+0800 (Singapore Standard Time)
+[debug] [2022-09-10T08:11:44.048Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-10T08:11:44.055Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-09-10T08:11:44.207Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-10T08:11:44.208Z] > authorizing via signed-in user (fwstock123@gmail.com)
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[debug] [2022-09-10T08:11:44.299Z] [hub] writing locator at C:\Users\user\AppData\Local\Temp\hub-fw-stock.json
+[debug] [2022-09-10T08:11:44.319Z] > refreshing access token with scopes: []
+[debug] [2022-09-10T08:11:44.321Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-09-10T08:11:44.321Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-10T08:11:44.450Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-09-10T08:11:44.450Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-10T08:11:44.461Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/fw-stock/sites 
+[debug] [2022-09-10T08:11:44.739Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-09-10T08:11:44.739Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-09-10T08:11:45.203Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/fw-stock/sites 200
+[debug] [2022-09-10T08:11:45.203Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/fw-stock/sites {"sites":[{"name":"projects/fw-stock/sites/fw-stock","defaultUrl":"https://fw-stock.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2022-09-10T08:11:45.204Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fw-stock/webApps/-/config [none]
+[debug] [2022-09-10T08:11:46.253Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fw-stock/webApps/-/config 200
+[debug] [2022-09-10T08:11:46.253Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fw-stock/webApps/-/config {"projectId":"fw-stock","appId":"1:479506617832:web:2537975d42a5e4febcc05d","storageBucket":"fw-stock.appspot.com","locationId":"asia-southeast1","apiKey":"AIzaSyCyLlEJRR-BtsL1FBa-bDD2X0eHaLU5VFs","authDomain":"fw-stock.firebaseapp.com","messagingSenderId":"479506617832","measurementId":"G-69CV1DTTGN"}
+[info] i  hosting: Serving hosting files from: FW_Stock {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mFW_Stock\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[warn] !  emulators: The Emulator UI is not starting, either because none of the emulated products have an interaction layer in Emulator UI or it cannot determine the Project ID. Pass the --project flag to specify a project. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI is not starting, either because none of the emulated products have an interaction layer in Emulator UI or it cannot determine the Project ID. Pass the --project flag to specify a project."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┐
+│ Emulator │ Host:Port      │
+├──────────┼────────────────┤
+│ Hosting  │ localhost:5000 │
+└──────────┴────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-09-10T14:31:17.794Z] Received signal SIGHUP 1

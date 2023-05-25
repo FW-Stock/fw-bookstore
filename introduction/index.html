@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<!-- FW Bookstore -->
+		<!-- © Copyright 2022 FW Bookstore. Ideator: Francis Teoh Dun Yong, Developer: Lim Wen Hao, Social Media: Char Zhi Xuan. -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>FW Bookstore</title>
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+
+		<!-- Stylesheets -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" href="introduction.styles.css"> -->
+		<link rel="stylesheet" href="introduction.styles.min.css">
+
+		<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+		<!-- Metadata -->
+		<meta property="og:title" content="FW Bookstore">
+		<meta property="og:description" content="A website that exhibits a wide range of used books (reference, self-made notes, textbooks, exercises, etc) at a much lower price to help out students who will be sitting for big exams."/>
+		<meta property="og:image" content="../images/favicon/favicon-512.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="500">
+		<meta property="og:image:height" content="500">
+
+		<!-- Icon -->
+		<link rel="icon" href="../images/favicon/favicon-16.png" sizes="16x16">
+		<link rel="icon" href="../images/favicon/favicon-32.png" sizes="32x32">
+		<link rel="icon" href="../images/favicon/favicon-180.png" sizes="180x180">
+		<link rel="icon" href="../images/favicon/favicon-192.png" sizes="192x192">
+		<link rel="icon" href="../images/favicon/favicon-512.png" sizes="512x512">
+	</head>
+	<body>
+		<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbarTop fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../"><span class="title_FW">FW</span><span class="title_Stock"> Bookstore</span></a>
+        <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link nav-linkTop" aria-current="page" href="../">Shopping</a></li>
+            <li class="nav-item"><a class="nav-link active nav-linkTop" href="javascript:;">Our Page</a></li>
+						<li class="nav-item"><a class="nav-link nav-linkTop" href="../studio?action=upload">Upload Yours!</a></li>
+						<li class="nav-item l_user"><a class="nav-link nav-linkTop" href="javascript: profile()">My Account</a></li>
+          </ul>
+          <button class="btn btn-outline ms-2" id="b_user" name="button" onclick="profile()"><i class="fas fa-user i_user"><img id="i_profile" src=""></i></button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="main">
+      <div class="card mb-3 myCard">
+        <div class="row">
+          <div class="col-md-6 img"></div>
+          <div class="col-md-6 intro">
+            <p class="card-title mb-3 mt-5"><span class="card-title_big">BOOKSTORE</span>designed for<span class="card-title_big">STUDENTS</span></p>
+            <p class="card-text text-muted">We make second-hand books trading possible!</p>
+            <button type="button" name="button" class="mb-5" id="b_shopping" onclick="document.location.href = '../';">SHOP NOW</button>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3 mt-4" id="aboutUs">
+        <h3 class="l_title">ABOUT US</h3>
+				<p>Are you looking for <b>useful notes and reference books</b> to pass your exam with flying colours? 🤔<p>
+				<p>Or…</p>
+				<p>Are you woried because you can't <b>sell your reference books</b> that have accumulated after the PT3 and SPM exams? 😰 <br>Don’t worry about it! We are here to help you! </p>
+				<p>Welcome to FW bookstore! 🥳 <br>This is a website created and managed by former SPM students who want to help students facing big exams. </p>
+      </div>
+      <div class="mb-3 mt-4" id="advantage">
+        <h3 class="l_title">WHY CHOOSE US ? </h3>
+
+				<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+				  <div class="carousel-inner">
+				    <div class="carousel-item active">
+							<div class="box_advan">
+								<div class="mb-3"><i class="fa-regular fa-fingerprint fa_icon"></i></div>
+								<h4 class="l_advan">SAFER</h4>
+								<p class="p_advan">You can contact the seller easily and perform any transaction process online using Touch 'n Go Service. Our database and storage are built and protected using Google Firebase Service with strong security rules.</p>
+							</div>
+				    </div>
+				    <div class="carousel-item">
+							<div class="box_advan">
+								<div class="mb-3"><i class="fa-regular fa-sack-dollar fa_icon"></i></div>
+								<h4 class="l_advan">CHEAPER</h4>
+								<p class="p_advan">Here you'll find a wide range of used books including reference books, homemade notes, textbooks, exercises etc. at a much cheaper price. <br>In this store, users can enjoy up to 50% discount when buying the books! Guess what, you can even get free gifts! </p>
+							</div>
+				    </div>
+				    <div class="carousel-item">
+							<div class="box_advan">
+								<div class="mb-3"><i class="fa-regular fa-badge-percent fa_icon"></i></div>
+								<h4 class="l_advan">WORTH</h4>
+								<p class="p_advan">The books are sold from experienced seniors. Also, users can get the seller's contact number to get more information about the sold items or discuss with the seller to get a better discount. </p>
+							</div>
+				    </div>
+						<div class="carousel-item">
+							<div class="box_advan">
+								<div class="mb-3"><i class="fa-regular fa-address-card fa_icon"></i></div>
+								<h4 class="l_advan">QUALITY</h4>
+								<p class="p_advan">We only exhibit used books that are in good condition. </p>
+							</div>
+				    </div>
+						<div class="carousel-item">
+							<div class="box_advan">
+								<div class="mb-3"><i class="fa-regular fa-thumbs-up fa_icon"></i></div>
+								<h4 class="l_advan">BETTER EXPERIENCE</h4>
+								<p class="p_advan">All books are provied with descriptions and previews that aid users to choose the most suitable books. <br> If you want to become a seller, you can register on our website. After verification, you can sell your own used books! </p>
+							</div>
+				    </div>
+				  </div>
+				  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="visually-hidden">Previous</span>
+				  </button>
+				  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="visually-hidden">Next</span>
+				  </button>
+				</div>
+      </div>
+			<div class="mb-3 mt-4" id="manual">
+				<h3 class="l_title">MANUAL</h3>
+				<div class="accordion" id="accordionExample">
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="headingOne">
+				      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">BUYER Manual</button>
+				    </h2>
+				    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+				      <div class="accordion-body">
+								<p>To be a user/buyer of the website is just simple. Below are the steps!</p>
+								<p>1. Open our website <a href="https://fw-bookstore.web.app" target="_blank">FW Bookstore Login</a>. </p>
+								<p>2. <b>Register (new user) </b>:</p>
+								<p>• You can easily access it by logging in via your existing <b>Google</b> or <b>Facebook</b> account.</p>
+								<p>• You can easily sign up for a new account by clicking <a href="../login/?mode=register" target="_blank">Here</a>. You may need to provide personal information such as name, email and password.</p>
+								<p>• If you do not intend to register as a user, you can click on the anonymous login. </p>
+								<p>3. Once login, users will be directed to <code>Our Page</code>. Our page prepares users with a simple and informative introduction to our website.</p>
+								<p>4. Start shopping by clicking shop now on <code>Our Page</code> or on the button Shopping which is located on the top panel of the website. </p>
+								<p>5. On the <code>Shopping</code> page, users can look through all the books uploaded by verified sellers.</p>
+								<p>6. Users can find the preferred book easily by making use of the <b>Filter</b> feature on the left side of the page. Users can tick on the features to allow the website to sort for the book you are looking for.</p>
+								<p>7. Click on the interested book and users will be directed to the detailed information of the book.</p>
+								<p>8. Users get to <b>preview</b> the book. The description provided can enhance users' understanding of the book. </p>
+								<p>9. Users should <b>contact</b> the owner of the book by clicking the <b style="color: #DE6820;">Orange</b> button if interested to know more or even purchasing the book.</p>
+								<p>10. Owner of the book will reply to you as soon as possible. </p>
+								<p>11. If you would like to make a purchase, you should notify the owner and transfer the money to our only accepted and official <b style="color: #DF2056;">Tng Account (011-10760986 Francis Teoh Dun Yong)</b>. The seller of the book should assist you.</p>
+								<p>12. Action like account suspending will be taken if we find any private transaction between buyer and seller.</p>
+								<p>13. Please include your name and the name of the seller in the transaction. Kindly send the receipt to the seller by taking a screenshot of the transaction.</p>
+								<p>14. Our website does not provide any delivery assistance. The delivery of the book purchased should be discussed between buyer and seller.</p>
+								<p>15. <a href="#contact">Contact</a> us or <a href="mailto:fwstock123@gmail.com?subject=Report%20Bug%20/%20Give%20Suggestion">report</a> any issue to us if you encounter any problem.</p>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="headingTwo">
+				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">SELLER Manual</button>
+				    </h2>
+				    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+				      <div class="accordion-body">
+								<p>Wanna sell your used books on our website? Follow these steps!</p>
+								<p>1. <b>Register as a Seller</b></p>
+								<p>• By just one simple click on the <b style="color: #DE6820;">'Become a Seller!'</b> button on the <code>My Account</code> page, you can be a part of the seller team on our website. You may need to provide us with personal information such as name, email and contact method upon the agreement of our Privacy Policy. </p>
+								<p>• After your seller status is approved by our moderators, you will receive an email and be able to sell your items on our website. Check your email <i>spam</i> folder in case you miss the latest updates from FW Bookstore.</p>
+								<p>2. You ( / Seller) may update their public information on the <code>My Account</code> page such as name, contact method and profile image.</p>
+								<p>3. <b>Upload Items</b></p>
+								<p>• On the <code>Upload Yours!</code> page, you may include item details, for instance, name, types, prices, descriptions and <i>etc.</i> besides uploading media files.</p>
+								<p>• The item gets exhibited on our website after being uploaded by the seller and verified by our moderators.</p>
+								<p>4. Sellers can <b>edit</b> their items after uploaded by changing details such as name, description and etc. excluding uploading or deleting media files in <code>My Account</code> page.</p>
+								<p>5. Sellers should mark the item as <b style="color: #DE6820;">Sold</b> in <code>My Account</code> page after they have sold the books to buyers to avoid reduplication of transaction. Item that is marked as sold will be closed forever and not recoverable.</p>
+								<p>6. Sellers can delete item by pressing the <b style="color: #DE6820;">Delete</b> button in <code>My Account</code> Page. This action is permanent and unrecoverable.</p>
+								<p>7. Buyers can <b>contact</b> the sellers via the contact method set (in Step 2).</p>
+								<p>8. All the transactions and payments should only be directed to one official <b style="color: #DF2056;">TNG account (011-10760986 Francis Teoh Dun Yong)</b>. Sellers should provide buyers with our official payment account instead of your own account. </p>
+								<p>9. FW Bookstore will take 20% of the profit from every item you sold on our website and immediately pay the sellers with the 80% profit once we receive the money.</p>
+								<p>10. Action like account suspending will be taken if we find any private transaction between buyer and seller. The moderators reserve the right to edit or suspend the items uploaded by the seller once any violation is found.</p>
+								<p>11. Our website does not provide any delivery assistance. The delivery of the book purchased should be discussed between buyer and seller.</p>
+								<p>12. <a href="#contact">Contact</a> us or <a href="mailto:fwstock123@gmail.com?subject=Report%20Bug%20/%20Give%20Suggestion">report</a> any issue to us if you encounter any problem.</p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+      <div class="mb-3 mt-4" id="contact">
+        <h3 class="l_title">CONTACT US</h3>
+        <p class="l_email mb-3"><i class="fa-regular fa-at"></i> <a class="t_email" href="mailto:fwstock123@gmail.com" target="_blank">fwstock123@gmail.com</a></p>
+        <div class="row">
+          <div class="col-md-4 box_mods">
+            <p class="l_contact mb-1">IDEATOR</p>
+            <p class="l_contact_subtitle">FRANCIS TEOH DUN YONG</p>
+            <p><i class="fa-brands fa-facebook-square fa_contact"></i>  <a class="a_contact" href="https://www.facebook.com/teoh.francis.7" target="_blank">@teoh.francis.7<a></p>
+            <p><i class="fa-brands fa-instagram-square fa_contact"></i>  <a class="a_contact" href="https://www.instagram.com/francis_tdy/" target="_blank">@francis_tdy</a></p>
+          </div>
+          <div class="col-md-4 box_mods">
+            <p class="l_contact mb-1">DEVELOPER</p>
+            <p class="l_contact_subtitle">LIM WEN HAO</p>
+            <p><i class="fa-brands fa-facebook-square fa_contact"></i>  <a class="a_contact" href="https://www.facebook.com/limwenhao.hao.7/" target="_blank">@limwenhao.hao.7</a></p>
+            <p><i class="fa-brands fa-instagram-square fa_contact"></i>  <a class="a_contact" href="https://www.instagram.com/limwenhao1223/" target="_blank">@limwenhao1223</a></p>
+          </div>
+					<div class="col-md-4 box_mods">
+            <p class="l_contact mb-1">SOCIAL MEDIA</p>
+            <p class="l_contact_subtitle">CHAR ZHI XUAN</p>
+            <p><i class="fa-brands fa-facebook-square fa_contact"></i>  <a class="a_contact" href="https://www.facebook.com/zhixuan.char" target="_blank">@zhixuan.char</a></p>
+            <p><i class="fa-brands fa-instagram-square fa_contact"></i>  <a class="a_contact" href="https://www.instagram.com/zhixuanchar/" target="_blank">@zhixuanchar</a></p>
+          </div>
+        </div>
+      </div>
+      <p class="p_bug mb-3 mt-4"><a class="l_bug" href="mailto:fwstock123@gmail.com?subject=Report%20Bug%20/%20Give%20Suggestion" target="_blank">Report Bug / Give Suggestion</a></p>
+      <div class="copyright">
+        © Copyright 2022 FW Bookstore. Ideator: Francis Teoh Dun Yong, Developer: Lim Wen Hao, Social Media: Char Zhi Xuan.
+      </div>
+    </div>
+
+		<!-- JavaScript -->
+    <!-- Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
+    <script>
+      var config = {
+				apiKey: "AIzaSyCyLlEJRR-BtsL1FBa-bDD2X0eHaLU5VFs",
+		    authDomain: "fw-stock.firebaseapp.com",
+		    projectId: "fw-stock",
+		    storageBucket: "fw-stock.appspot.com",
+		    messagingSenderId: "479506617832",
+		    appId: "1:479506617832:web:2537975d42a5e4febcc05d",
+		    measurementId: "G-69CV1DTTGN"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<!-- <script src="introduction.js?v=1.0.7" charset="utf-8"></script> -->
+    <script src="introduction.min.js?v=1.2.0" charset="utf-8"></script>
+	</body>
+</html>
